@@ -9,22 +9,33 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.my_proekt_3.DATA.LOCAL.Pref
 import com.example.my_proekt_3.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private val pref by lazy {
+        Pref(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
+
+
         setContentView(binding.root)
 
         val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        navController.navigate(R.id.boardingFragment)
+
+
+        if (!pref.isShow())
+            navController.navigate(R.id.boardingFragment)
+
+
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_home,
@@ -41,8 +52,7 @@ class MainActivity : AppCompatActivity() {
                 navView.isVisible = false
                 supportActionBar?.hide()
 
-            }
-            else{
+            } else {
                 navView.isVisible = true
                 supportActionBar?.show()
             }
