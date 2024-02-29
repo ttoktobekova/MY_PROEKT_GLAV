@@ -31,10 +31,19 @@
         android:id="@+id/navigation_profile"
         android:name="com.example.my_proekt_3.ui.Profile.ProfileFragment"
         android:label="Profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_createFragment"
+            app:destination="@id/createFragment" />
+    </fragment>
     <fragment
         android:id="@+id/boardingFragment"
         android:name="com.example.my_proekt_3.ui.onBoarding.BoardingFragment"
         android:label="fragment_boarding"
         tools:layout="@layout/fragment_boarding" />
+    <fragment
+        android:id="@+id/createFragment"
+        android:name="com.example.my_proekt_3.CREATE.CreateFragment"
+        android:label="fragment_create"
+        tools:layout="@layout/fragment_create" />
 </navigation>

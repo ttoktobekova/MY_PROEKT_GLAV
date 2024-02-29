@@ -14,4 +14,8 @@
     <string name="skip">skip</string>
     <string name="Title">Title</string>
     <string name="go_next">Go Next</string>
+    <string name="btn_open">btn_open</string>
+    <string name="save1">Save</string>
+    <string name="names">Введите ваше имя</string>
+    <string name="Ok">Готово</string>
 </resources>

@@ -4,13 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:padding="16dp"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".ui.Profile.ProfileFragment">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/profile_image"
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img_profile"
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:src="@drawable/ic_profile"
@@ -18,9 +17,21 @@
         app:civ_border_width="0.5dp" />
 
     <EditText
-        android:id="@+id/et_name"
+        android:id="@+id/et_names"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:hint="@string/name" />
+        android:layout_marginTop="40dp"
+        android:hint="@string/names"
+        android:textAlignment="center"
+        />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_200"
+        android:text="@string/Ok"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
+
 </LinearLayout>
