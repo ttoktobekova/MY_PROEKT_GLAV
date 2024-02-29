@@ -29,7 +29,7 @@ class Pref(context: Context) {
     fun getImg(): String? {
         return pref.getString(IMG_KEY, null)
     }
-
+//Hi
     companion object {
         const val PREF_NAME = "pref_name"
         const val SHOWED_KEY = "showed_key"
